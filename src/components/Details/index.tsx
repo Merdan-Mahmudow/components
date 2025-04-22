@@ -21,6 +21,7 @@ export function ProductDetail({ item, setIndex }: { item: ProductItem, setIndex:
             left={0}
             bottom={0}
             right={0}
+            pt={"2em"}
             pointerEvents="none"
             backdropBlur="2xl"
             px={4} // адаптивный отступ по краям

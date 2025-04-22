@@ -51,7 +51,7 @@ export function App() {
 
     return (
         <MotionBox
-            pt={{ base: "4em" }} overflowX={"hidden"}>
+            overflowX={"hidden"}>
             <MotionBox
                 display={"flex"}
                 justifyContent={"space-between"}
@@ -85,6 +85,7 @@ export function App() {
                         ref={inputRef}
                         placeholder="Поиск"
                         value={value}
+                        type={"search"}
                         rounded={"xl"}
                         bg={{_dark: "whiteAlpha.200", _light: "blackAlpha.200"}}
                         onChange={(e) => {
