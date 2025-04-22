@@ -1,0 +1,33 @@
+.overlay {
+    background: white;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .single-image-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  
+  .single-image-container * {
+    pointer-events: all;
+  }
+  
+  .single-image {
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+  }
