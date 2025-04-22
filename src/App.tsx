@@ -51,7 +51,7 @@ export function App() {
 
     return (
         <MotionBox
-            pt={{ base: "8" }} overflowX={"hidden"}>
+            pt={{ base: "4em" }} overflowX={"hidden"}>
             <MotionBox
                 display={"flex"}
                 justifyContent={"space-between"}

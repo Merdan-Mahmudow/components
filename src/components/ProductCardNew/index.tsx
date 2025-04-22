@@ -65,7 +65,7 @@ export function ProductCardNew({ variants, item, setIndex }: { variants: any, it
                     fontWeight="bold"
                     letterSpacing={"1.5px"}
                     color={"white"}
-                    className="montserrat"
+                    className="roboto"
                 >{item.name}</Text>
 
 
@@ -78,7 +78,7 @@ export function ProductCardNew({ variants, item, setIndex }: { variants: any, it
                         fontWeight="bold"
                         letterSpacing={"1.5px"}
                         color={"white"}
-                        className="merriweather"
+                        className="roboto"
                     >от {item.price.small} ₽</Text>
 
                     <MotionButton
