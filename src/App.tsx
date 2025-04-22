@@ -2,7 +2,7 @@ import { ProductCardNew, ProductItem } from "./components/ProductCardNew";
 import { ColorModeButton } from "./components/ui/color-mode";
 import { MotionBox, MotionGrid } from "./motion";
 import MargaritaIMG from "./assets/pizza.png";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence} from "framer-motion";
 import { ProductDetail } from "./components/Details";
 import { Box} from "@chakra-ui/react";
@@ -27,7 +27,6 @@ const container = {
 // };
 export function App() {
     const [index, setIndex] = useState<string | boolean>(false);
-    const bodyRef = useRef<HTMLDivElement>(null);
     const productItems: ProductItem[] = [
         {
             id: "1",
