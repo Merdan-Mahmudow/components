@@ -9,7 +9,7 @@ export const StatusBarSync = () => {
     console.log(colorMode)
     const applyStatusBarStyle = async () => {
       // Тёмная тема: делаем статус-бар светлым (белый фон, тёмные иконки)
-      if (colorMode === 'light') {
+      if (colorMode === 'dark') {
         await StatusBar.setStyle({ style: Style.Dark });
         await StatusBar.setBackgroundColor({ color: '#ffffff' });
       } else {
