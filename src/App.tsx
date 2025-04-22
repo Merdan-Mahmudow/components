@@ -154,7 +154,7 @@ export function App() {
         }
     ];
     return (
-        <Box w={"100vw"} h={"100vh"} ref={bodyRef} overflow={"hidden"} position={"relative"}>
+        <Box >
             <ColorModeButton />
         <MotionGrid
             templateColumns={{ lg: "repeat(auto-fill, minmax(300px, 1fr))", base: "repeat(2, 1fr)" }}
