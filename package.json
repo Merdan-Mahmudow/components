@@ -13,6 +13,7 @@
     "@capacitor/android": "^7.2.0",
     "@capacitor/cli": "^7.2.0",
     "@capacitor/core": "^7.2.0",
+    "@capacitor/status-bar": "^7.0.1",
     "@chakra-ui/react": "^3.16.0",
     "@chakra-ui/system": "^2.6.2",
     "@emotion/react": "^11.14.0",
