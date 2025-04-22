@@ -1,0 +1,22 @@
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+.roboto-italic {
+    font-family: 'Roboto Italic', sans-serif;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+.montserrat-italic {
+    font-family: 'Montserrat Italic', sans-serif;
+}
+.merriweather {
+    font-family: 'Merrieweather', sans-serif;
+}   
+.merriweather-italic {
+    font-family: 'Merrieweather Italic', sans-serif;
+}
+
+* {
+    user-select: none;
+}

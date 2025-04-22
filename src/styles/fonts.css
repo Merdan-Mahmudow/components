@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/public/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url(../../public/fonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Montserrat Italic';
+    src: url(/public/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Merrieweather';
+    src: url(/public/fonts/Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Merrieweather Italic';
+    src: url(/public/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.ttf) format('truetype');
+    font-style: italic;
+    font-weight: 100 900;
+}

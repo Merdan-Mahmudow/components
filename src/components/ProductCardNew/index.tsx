@@ -6,10 +6,16 @@ export interface ImageURL {
     base: string
     details: string
 }
+
+export interface PizzaPrice {
+    small: number
+    medium: number
+    large: number
+}
 export interface ProductItem {
     id: string;
     name: string;
-    price: number;
+    price: PizzaPrice;
     imageUrl: ImageURL;
     description: string;
     weight: string;
@@ -22,9 +28,9 @@ export function ProductCardNew({ variants, item, setIndex }: { variants: any, it
         <MotionCard
             key={item.id}
             size={"sm"}
-            w={["12em", "15em", "16em"]}
+            w={["10em", "10em", "12em"]}
             maxW="24em"
-            h={["16em", "18em", "20em"]}
+            h={["13em", "13em", "16em"]}
             overflow="hidden"
             rounded="2xl"
             shadow="md"
@@ -33,10 +39,12 @@ export function ProductCardNew({ variants, item, setIndex }: { variants: any, it
             variants={variants}
             onClick={() => setIndex(item.id)}
             layoutId={item.id}
-            cursor={"pointer"}
-            whileHover={{ scale: 1.05 }}>
+            cursor={"pointer"}>
+
             <Image
                 src={item.imageUrl.base} />
+
+
             <Card.Footer
                 pos={"absolute"}
                 h={"12em"}
@@ -50,25 +58,32 @@ export function ProductCardNew({ variants, item, setIndex }: { variants: any, it
                 flexDir={"column"}
                 alignItems={"start"}
                 justifyContent={"end"}>
-                <Text fontSize={["md", "lg", "xl"]}
-                    fontWeight="medium"
-                    letterSpacing={"1px"}
+
+
+                <Text
+                    fontSize={["sm", "md", "lg"]}
+                    fontWeight="bold"
+                    letterSpacing={"1.5px"}
                     color={"white"}
+                    className="montserrat"
                 >{item.name}</Text>
+
+
                 <Flex
                     alignItems={"center"}
                     justifyContent={"space-between"}
                     w={"full"}>
 
-                    <Text fontSize={["md", "lg", "xl"]}
-                        fontWeight="medium"
-                        letterSpacing={"1px"}
+                    <Text fontSize={["xs", "sm", "md"]}
+                        fontWeight="bold"
+                        letterSpacing={"1.5px"}
                         color={"white"}
-                    >от {item.price} ₽</Text>
+                        className="merriweather"
+                    >от {item.price.small} ₽</Text>
 
                     <MotionButton
                         bg={"transparent"}>
-                        <Icon as={FaAngleRight} color={"white"} fontSize={"1.5rem"} />
+                        <Icon as={FaAngleRight} color={"white"} fontSize={"1.5rem"} size={"sm"}/>
                     </MotionButton>
                 </Flex>
 
