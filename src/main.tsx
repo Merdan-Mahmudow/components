@@ -1,15 +1,29 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { App } from './App.tsx'
-import { Provider } from './components/ui/provider.tsx'
-import './index.css'
-import { StatusBarSync } from './components/SafeArea/index.tsx'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Provider >
-      <StatusBarSync />
-      <App />
-    </Provider>
-  </StrictMode>,
-)
+import { routeTree } from './routeTree.gen'
+import { Provider } from './components/ui/provider'
+import { StatusBarSync } from './components/SafeArea'
+
+const router = createRouter({ routeTree })
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router
+  }
+}
+
+
+const rootElement = document.getElementById('root')!
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement)
+  root.render(
+    <StrictMode>
+      <Provider >
+        <StatusBarSync />
+        <RouterProvider router={router} />
+      </Provider>
+    </StrictMode>,
+  )
+}

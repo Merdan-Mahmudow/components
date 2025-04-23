@@ -1,52 +1,26 @@
 import { ProductItem } from "../ProductCardNew";
 import "./index.css";
-import { Box, Card, CloseButton, Float, Heading, Icon, Image, SegmentGroup, Text, VStack } from "@chakra-ui/react";
+import { Card, Heading, Icon, Image, SegmentGroup, Text, VStack } from "@chakra-ui/react";
 import { MotionButton, MotionCard } from "../../motion";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 
-export function ProductDetail({ item, setIndex }: { item: ProductItem, setIndex: (index: any) => void }) {
+export function ProductDetail({ item }: { item: ProductItem }) {
     const [selectedDiameter, setSelectedDiameter] = useState<string | null>("30 см")
 
 
     return (
-        <Box
-            w="full"
-            h="full"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            position="fixed"
-            top={0}
-            left={0}
-            bottom={0}
-            right={0}
-            pt={"2em"}
-            pointerEvents="none"
-            backdropBlur="2xl"
-            px={4} // адаптивный отступ по краям
-        >
 
             <MotionCard
                 layoutId={item.id}
-                maxW="50em"
-                w={{ base: "100%", sm: "90%", md: "75%", lg: "60%" }}
-                h="95%"
-                rounded="2xl"
+                h={"100vh"}
+                pos={"relative"}
                 pointerEvents="auto"
                 overflow="hidden"
                 display="flex"
                 flexDirection="column"
             >
-                <Float offset={"6"}>
-                    <CloseButton
-                        size={"2xs"}
-                        rounded={"full"}
-                        bg={"whiteAlpha.300"}
-                        color={"bg.inverted"}
-                        onClick={() => setIndex(false)}
-                    />
-                </Float>
+
                 <Card.Header
                     p={0}
                     overflow="hidden"
@@ -61,7 +35,6 @@ export function ProductDetail({ item, setIndex }: { item: ProductItem, setIndex:
                         w="full"
                         h={{ base: "14em", sm: "18em", md: "22em", lg: "26em" }}
                         objectFit="cover"
-                        roundedTop={{ base: "xl", md: "2xl" }}
                     />
                 </Card.Header>
 
@@ -106,7 +79,5 @@ export function ProductDetail({ item, setIndex }: { item: ProductItem, setIndex:
                 </Card.Footer>
 
             </MotionCard>
-        </Box>
-
     );
 }
