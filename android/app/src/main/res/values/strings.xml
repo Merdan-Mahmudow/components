@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">PIZZETTO</string>
+    <string name="title_activity_main">PIZZETTO</string>
+    <string name="package_name">com.skyrodev.pizzetto</string>
+    <string name="custom_url_scheme">com.skyrodev.pizzetto</string>
+</resources>
