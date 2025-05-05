@@ -32,7 +32,7 @@ export function CardFooter({
                     initial={{ opacity: 0, scale: 0.7 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0.5, scale: 0.9 }}
-                    transition={{ duration: 0.025 }}
+                    transition={{ duration: 0.09 }}
                     fontSize="1rem"
                     fontWeight="bold"
                     width="2rem"

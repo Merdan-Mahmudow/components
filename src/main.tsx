@@ -5,6 +5,9 @@ import './index.css'
 import { routeTree } from './routeTree.gen'
 import { Provider } from './components/ui/provider'
 import { StatusBarSync } from './components/SafeArea'
+import LogRocket from 'logrocket';
+
+LogRocket.init('4iybf7/pizzetto');
 
 const router = createRouter({ routeTree })
 

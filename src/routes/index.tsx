@@ -6,6 +6,7 @@ import { productItems } from "../db";
 import { Avatar, Box, CloseButton, Heading, Input, InputGroup, SegmentGroup } from "@chakra-ui/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { LuGrid2X2, LuList } from "react-icons/lu";
+import { PopularSlider } from "../components/PopularSlider";
 
 export const Route = createFileRoute("/")({
     component: App
@@ -107,6 +108,7 @@ export function App() {
                         }}
                     />
                 </InputGroup>
+                <PopularSlider products={filteredPizzas} />
                 <MotionBox
                     as="h1"
                     fontSize={["2xl", "3xl", "4xl"]}

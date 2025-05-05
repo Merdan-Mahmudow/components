@@ -1,33 +1,26 @@
-import { Card, Image, Text, For, Box, Icon } from "@chakra-ui/react";
+import { Card, Image, Text, Box, Icon } from "@chakra-ui/react";
 import {  MotionButton, MotionCard } from "../../motion";
 import { useState } from "react";
 import { CardFooter } from "./footer";
 import { FaCartShopping } from "react-icons/fa6";
+import { ProductItem } from "../ProductCardNew";
 
-export function ProductCard({variants}: {variants: any}) {
+export function ProductCard({item}:{item: ProductItem}) {
   const [count, setCount] = useState(0)
   const increment = () => setCount(prev => prev + 1);
   const decrement = () => setCount(prev => Math.max(0, prev - 1));
   return (
 
-    <For each={["1", "2"]}>
-      {(index) => (
         <MotionCard
-          key={index}
           size={"sm"}
-          w={["13em", "16em", "17em"]}
-          maxW="24em"
           h={"auto"}
           overflow="hidden"
           rounded="2xl"
-          shadow="md"
-          display="flex"
-          flexDirection="column"
-          variants={variants}
+          display={"flex"}
         >
           <Box position="relative" h={["10em", "12em", "15em"]}>
             <Image
-              src="https://blizko.by/system/notes/imagefbs/000/038/951/original/kupon.jpg?1668422754"
+              src={item.imageUrl.base}
               alt="Green double couch with wooden legs"
               objectFit="cover"
               w="100%"
@@ -41,10 +34,12 @@ export function ProductCard({variants}: {variants: any}) {
               fontWeight="bold"
               letterSpacing={"1px"}
             >
-              450₽
+              {item.price.small} ₽
             </Text>
-            <Card.Title fontSize={["md", "lg", "xl"]} fontWeight={"400"} letterSpacing={".5px"}>Баскет Дуэт Оригинальный</Card.Title>
-            <Card.Title fontSize={["xs", "sm", "md"]} fontWeight={"300"} letterSpacing={".5px"} color={"gray.500"}>256 г</Card.Title>
+            <Card.Title fontSize={["md", "lg", "xl"]} fontWeight={"400"} letterSpacing={".5px"}>
+              {item.name}
+            </Card.Title>
+            <Card.Title fontSize={["xs", "sm", "md"]} fontWeight={"300"} letterSpacing={".5px"} color={"gray.500"}></Card.Title>
           </Card.Body>
 
           <Card.Footer
@@ -72,8 +67,6 @@ export function ProductCard({variants}: {variants: any}) {
 
           </Card.Footer>
         </MotionCard>
-      )}
-    </For>
 
   )
 }
